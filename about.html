@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Explore Nepal Tours & Travels</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(15,23,42,.75);
+    backdrop-filter:blur(12px);
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+/* IMPORTANT: dropdown anchor fix */
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    display:block;
+    padding:10px 14px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:999px;
+    transition:.3s;
+    font-size:14px;
+    white-space:nowrap;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* active page */
+.active{
+    background:#38bdf8;
+    color:#000 !important;
+}
+
+
+
+/* ================= DROPDOWN FIX ================= */
+
+.submenu{
+    position:absolute;
+    top:100%;
+    left:0;
+
+    display:none;
+    min-width:180px;
+
+    background:#0f172a;
+    list-style:none;
+    padding:10px;
+    border-radius:10px;
+
+    z-index:999;
+}
+
+.submenu li a{
+    display:block;
+    padding:10px;
+    border-radius:8px;
+}
+
+.submenu li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* keep dropdown open on hover */
+.dropdown:hover .submenu{
+    display:block;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:3.5rem;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:90px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+/* ================= ABOUT CONTENT ================= */
+
+.about-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    align-items:center;
+}
+
+.about-text p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+/* ================= VALUES ================= */
+
+.grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .submenu{
+        position:static;
+        display:none;
+        background:#0f172a;
+    }
+
+    .dropdown:hover .submenu{
+        display:block;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html" class="active">About</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="domestic.html">Domestic</a></li>
+<li><a href="international.html">International</a></li>
+<li><a href="adventure.html">Adventure</a></li>
+<li><a href="trekking.html">Trekking</a></li>
+<li><a href="hotel.html">Hotels</a></li>
+<li><a href="vehicle.html">Vehicles</a></li>
+<li><a href="blog.html">Blog</a></li>
+
+<!-- DROPDOWN FIXED -->
+<li class="dropdown">
+<a href="#">Destinations ▾</a>
+
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+<li><a href="destinations.html">All Destinations</a></li>
+</ul>
+
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>About Explore Nepal</h1>
+<p>Your trusted travel partner for unforgettable journeys in Nepal</p>
+</div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="section">
+
+<div class="section-title">
+<h2>Who We Are</h2>
+</div>
+
+<div class="about-container">
+
+<div class="about-text">
+<p>
+Explore Nepal Tours & Travels is a premier travel company dedicated to showcasing the beauty,
+culture, and adventure of Nepal.
+</p>
+
+<p>
+We specialize in customized tour packages, trekking adventures, cultural experiences, hotel bookings,
+and international travel services.
+</p>
+
+<p>
+Our mission is to provide safe, memorable, and affordable travel experiences for every traveler.
+</p>
+</div>
+
+<div>
+ <img src="images/neepal.jpg" alt="Nepal" style="width:100%;border-radius:15px;">
+</div>
+
+</div>
+
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:white;">
+
+<div class="section-title">
+<h2>Our Values</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>🌍 Passion for Travel</h3>
+<p>We love exploring and sharing Nepal’s beauty with the world.</p>
+</div>
+
+<div class="card">
+<h3>🤝 Trust & Safety</h3>
+<p>Your safety and satisfaction are always our top priorities.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Quality Service</h3>
+<p>We ensure the best travel experience from start to finish.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Explore Nepal Tours & Travels. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

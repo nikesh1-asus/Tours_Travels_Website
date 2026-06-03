@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Destinations - Explore Nepal Tours</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    opacity:0;
+    animation: pageFade 1s ease forwards;
+}
+
+/* PAGE FADE */
+@keyframes pageFade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    inset-block-start:0;
+    inline-size:100%;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li a{
+    color:white;
+    padding:10px 14px;
+    text-decoration:none;
+    border-radius:999px;
+    transition:0.3s;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.active{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* HERO */
+/* HERO */
+.hero{
+    block-size:60vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+
+    animation: slowZoom 8s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom{
+    from{
+        transform:scale(1);
+        filter:brightness(0.9);
+    }
+    to{
+        transform:scale(1.1);
+        filter:brightness(1.1);
+    }
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumbini - Explore Nepal Tours</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    opacity:0;
+    animation: pageFade 1.2s ease forwards;
+}
+
+@keyframes pageFade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* ================= NAVBAR FIX ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    color:white;
+    padding:10px 14px;
+    text-decoration:none;
+    border-radius:999px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.nav-list li a.active{
+    background:#0ea5e9;
+    color:#fff;
+}
+
+
+/* ================= DROPDOWN FIX ================= */
+
+.dropdown .submenu{
+    position:absolute;
+    top:120%;
+    left:0;
+    min-width:200px;
+    background:rgba(15,23,42,.95);
+    border-radius:10px;
+    list-style:none;
+    padding:8px 0;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+    transition:0.3s ease;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.dropdown:hover .submenu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.submenu li a{
+    display:block;
+    padding:10px 15px;
+    border-radius:0;
+    white-space:nowrap;
+}
+
+.submenu li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:65vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+
+    animation: slowZoom 6s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom{
+    from{transform:scale(1); filter:brightness(0.9);}
+    to{transform:scale(1.1); filter:brightness(1.1);}
+}
+
+.hero h1{
+    font-size:3rem;
+    animation:textFade 2s ease;
+}
+
+@keyframes textFade{
+    from{opacity:0; transform:translateY(-20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:80px 40px;
+    text-align:center;
+}
+
+.section h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    text-align:left;
+}
+
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+    transition:0.5s;
+}
+
+.card img:hover{
+    transform:scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="domestic.html">Domestic</a></li>
+<li><a href="international.html">International</a></li>
+<li><a href="adventure.html">Adventure</a></li>
+<li><a href="trekking.html">Trekking</a></li>
+<li><a href="hotel.html">Hotels</a></li>
+<li><a href="vehicle.html">Vehicles</a></li>
+<li><a href="blog.html">Blog</a></li>
+
+<!-- DROPDOWN FIXED -->
+<li class="dropdown">
+    <a href="#">Destinations ▾</a>
+    <ul class="submenu">
+        <li><a href="pokhara.html">Pokhara</a></li>
+        <li><a href="chitwan.html">Chitwan</a></li>
+        <li><a href="lumbini.html">Lumbini</a></li>
+        <li><a href="destinations.html">All Destinations</a></li>
+    </ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Lumbini - Birthplace of Lord Buddha</h1>
+</section>
+
+<!-- CONTENT -->
+<section class="section">
+
+<h2>Peaceful Spiritual Journey</h2>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1200&q=80">
+
+<p>
+Lumbini is one of the most sacred places in the world, known as the birthplace of Lord Buddha.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Explore Nepal Tours & Travels</p>
+</footer>
+
+</body>
+</html>

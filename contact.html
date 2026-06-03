@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Explore Nepal Tours & Travels</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+    padding-top:90px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(15,23,42,.92);
+    backdrop-filter:blur(12px);
+    overflow:visible;
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li a{
+    display:block;
+    padding:10px 14px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:999px;
+    font-size:14px;
+    transition:0.3s;
+    white-space:nowrap;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.nav-list li a.active{
+    background:#38bdf8;
+    color:#000;
+    font-weight:600;
+}
+
+.nav-list li a.cta{
+    background:#38bdf8;
+    color:#000;
+    font-weight:700;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown{
+    position:relative;
+}
+
+.submenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:200px;
+    background:#0f172a;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    z-index:9999;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+.dropdown.active .submenu{
+    display:block;
+}
+
+.submenu li a{
+    border-radius:0;
+    display:block;
+}
+
+/* ================= HERO ================= */
+.hero{
+    height:50vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{font-size:3rem;}
+.hero p{font-size:1.2rem;}
+
+/* ================= SECTION ================= */
+.section{
+    padding:90px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+/* ================= CONTACT ================= */
+.contact-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr 0.8fr;
+    gap:40px;
+}
+
+/* FORM */
+form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+textarea{height:120px;}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#38bdf8;
+    border:none;
+    border-radius:25px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0ea5e9;
+    color:white;
+}
+
+/* MESSAGE */
+.message{
+    margin-top:15px;
+    padding:12px;
+    border-radius:8px;
+    display:none;
+}
+
+.error{background:#fee2e2;color:#b91c1c;}
+.success{background:#dcfce7;color:#166534;}
+
+/* INFO BOX */
+.info-box{
+    background:linear-gradient(145deg,#ffffff,#f1f5f9);
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    border-left:5px solid #38bdf8;
+}
+
+.info-box h3{
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+.info-box p{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{font-size:2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="domestic.html">Domestic</a></li>
+<li><a href="international.html">International</a></li>
+<li><a href="adventure.html">Adventure</a></li>
+<li><a href="trekking.html">Trekking</a></li>
+<li><a href="hotel.html">Hotels</a></li>
+<li><a href="vehicle.html">Vehicles</a></li>
+<li><a href="blog.html">Blog</a></li>
+
+<li class="dropdown">
+<a href="#">Destinations ▾</a>
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+</ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Contact Us</h1>
+<p>We are here to help you plan your perfect trip</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+
+<div class="section-title">
+<h2>Get In Touch</h2>
+</div>
+
+<div class="contact-container">
+
+<form onsubmit="return validateForm(event)">
+<input type="text" id="name" placeholder="Your Name">
+<input type="email" id="email" placeholder="Your Email">
+<input type="text" id="subject" placeholder="Subject">
+<textarea id="message" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+<div id="msgBox" class="message"></div>
+</form>
+
+<div class="info-box">
+<h3>Contact Information</h3>
+<p><b>Address:</b> Canberra, Australia</p>
+<p><b>Phone:</b> +61-2-1234-5678</p>
+<p><b>Email:</b> info@explorenepal.com</p>
+<p><b>Working Hours:</b> 9 AM – 6 PM</p>
+<p><b>Services:</b> Tours, Trekking, Hotels, Vehicles</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Explore Nepal Tours & Travels</p>
+</footer>
+
+<script>
+// ACTIVE LINK
+let links = document.querySelectorAll(".nav-list a");
+let currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+    if(link.getAttribute("href") === currentPage){
+        link.classList.add("active");
+    }
+});
+
+// DROPDOWN CLICK FIX (MOBILE)
+document.querySelectorAll(".dropdown > a").forEach(item => {
+    item.addEventListener("click", function(e){
+        e.preventDefault();
+        this.parentElement.classList.toggle("active");
+    });
+});
+
+// FORM VALIDATION
+function validateForm(event){
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    let msgBox = document.getElementById("msgBox");
+
+    if(!name || !email || !subject || !message){
+        msgBox.style.display="block";
+        msgBox.className="message error";
+        msgBox.innerText="Please fill all fields!";
+        return false;
+    }
+
+    msgBox.style.display="block";
+    msgBox.className="message success";
+    msgBox.innerText="Message sent successfully!";
+
+    document.querySelector("form").reset();
+    return true;
+}
+</script>
+
+</body>
+</html>

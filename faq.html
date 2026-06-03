@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - Explore Nepal Tours & Travels</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+    padding-top:70px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(12px);
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    display:block;
+    padding:10px 14px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:999px;
+    transition:.3s;
+    font-size:14px;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* ACTIVE FIX (IMPORTANT) */
+.nav-list li a.active{
+    background:#38bdf8;
+    color:#000 !important;
+    font-weight:600;
+}
+
+
+/* ================= DROPDOWN FIX ================= */
+
+.dropdown{
+    position:relative;
+}
+
+.submenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#0f172a;
+    min-width:180px;
+    border-radius:10px;
+    padding:10px;
+}
+
+.submenu li{
+    list-style:none;
+}
+
+.submenu li a{
+    display:block;
+    padding:10px;
+    border-radius:8px;
+}
+
+.submenu li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:3.5rem;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:90px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+/* ================= FAQ ================= */
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    background:white;
+    margin-bottom:15px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    transition:.3s;
+}
+
+.faq-item:hover{
+    transform:translateY(-5px);
+}
+
+.faq-item h3{
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.faq-item p{
+    color:#555;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .submenu{
+        position:static;
+        display:none;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="domestic.html">Domestic</a></li>
+<li><a href="international.html">International</a></li>
+<li><a href="adventure.html">Adventure</a></li>
+<li><a href="trekking.html">Trekking</a></li>
+<li><a href="hotel.html">Hotels</a></li>
+<li><a href="vehicle.html">Vehicles</a></li>
+<li><a href="blog.html">Blog</a></li>
+
+<li class="dropdown">
+<a href="#">Destinations ▾</a>
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+<li><a href="destinations.html">All Destinations</a></li>
+</ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html">Reviews</a></li>
+<li><a href="faq.html" class="active">FAQ</a></li>
+
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>FAQ</h1>
+<p>Frequently Asked Questions about our travel services</p>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+<div class="section-title">
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq-container">
+
+<div class="faq-item">
+<h3>How can I book a tour?</h3>
+<p>Contact us or click Book Now.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you offer custom packages?</h3>
+<p>Yes, fully customized travel plans are available.</p>
+</div>
+
+<div class="faq-item">
+<h3>Is trekking safe in Nepal?</h3>
+<p>Yes, with professional guides and proper support.</p>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Explore Nepal Tours & Travels</p>
+</footer>
+
+</body>
+</html>

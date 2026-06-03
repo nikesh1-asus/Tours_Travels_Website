@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Nepal Tours & Travels</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(15,23,42,.75);
+    backdrop-filter:blur(12px);
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    display:block;
+    padding:10px 14px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:999px;
+    transition:.3s;
+    font-size:14px;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.active{
+    background:#38bdf8;
+    color:#000 !important;
+}
+
+
+.submenu{
+    display:none;
+    position:absolute;
+    top:45px;
+    left:0;
+    min-width:220px;
+    background:#0f172a;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+.submenu li a{
+    border-radius:0;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:90px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+/* ================= DESTINATIONS ================= */
+
+.grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:white;
+}
+
+.service-box{
+    text-align:center;
+    padding:30px;
+    background:#f8fafc;
+    border-radius:15px;
+}
+
+/* ================= CTA ================= */
+
+.cta-section{
+    text-align:center;
+    padding:100px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.cta-section h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.cta-section a{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 28px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.nav-list{
+    flex-direction:column;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html" class="active">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="domestic.html">Domestic</a></li>
+
+<li><a href="international.html">International</a></li>
+
+<li><a href="adventure.html">Adventure</a></li>
+
+<li><a href="trekking.html">Trekking</a></li>
+
+<li><a href="hotel.html">Hotels</a></li>
+
+<li><a href="vehicle.html">Vehicles</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li class="dropdown">
+<a href="#">Destinations ▾</a>
+
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+<li><a href="destinations.html">All Destinations</a></li>
+</ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="hero-content">
+<h1>Explore Nepal Tours & Travels</h1>
+<p>
+Discover breathtaking mountains, cultural heritage,
+wildlife adventures and unforgettable journeys across Nepal.
+</p>
+
+<a href="contact.html" class="hero-btn">Book Your Adventure</a>
+</div>
+</section>
+
+<!-- DESTINATIONS -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Popular Destinations</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/pokhara.jpg" alt="Pokhara">
+<div class="card-content">
+<h3>Pokhara</h3>
+<p>City of lakes, mountains and adventure activities.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/chitwan.jpg" alt="Chitwan">
+<div class="card-content">
+<h3>Chitwan</h3>
+<p>Explore wildlife, jungle safari and nature experiences.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/lumbini.jpg" alt="Lumbini">
+<div class="card-content">
+<h3>Lumbini</h3>
+<p>Birthplace of Lord Buddha and spiritual destination.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section services">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="grid">
+
+<div class="service-box">
+<h3>✈ International Tours</h3>
+<p>Customized travel packages worldwide.</p>
+</div>
+
+<div class="service-box">
+<h3>🥾 Trekking Packages</h3>
+<p>Everest, Annapurna and many more routes.</p>
+</div>
+
+<div class="service-box">
+<h3>🏨 Hotel Booking</h3>
+<p>Best accommodation options across Nepal.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta-section">
+
+<h2>Ready For Your Next Adventure?</h2>
+
+<p>
+Contact our travel experts and start planning your dream trip today.
+</p>
+
+<a href="contact.html">Contact Us</a>
+
+</section>
+
+<footer>
+<p>© 2026 Explore Nepal Tours & Travels. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

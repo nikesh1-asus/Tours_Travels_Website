@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokhara - Explore Nepal Tours</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* PAGE FADE-IN */
+body{
+    background:#f8fafc;
+    opacity:0;
+    transform:translateY(10px);
+    animation:pageFade 2.5s ease-in-out forwards;
+}
+
+@keyframes pageFade{
+    0%{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(15,23,42,.75);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li a{
+    color:#fff;
+    padding:10px 14px;
+    text-decoration:none;
+    border-radius:999px;
+    transition:0.3s;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* DROPDOWN */
+
+.submenu{
+    display:none;
+    position:absolute;
+    background:#0f172a;
+    list-style:none;
+    padding:10px;
+    border-radius:10px;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:65vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    position:relative;
+    overflow:hidden;
+}
+
+/* SLIDES */
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    top:0;
+    left:0;
+
+    opacity:0;
+    transform:scale(1.08);
+    transition:opacity 1.8s ease-in-out, transform 6s ease-in-out;
+}
+
+.slide.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+/* DARK OVERLAY */
+.hero::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+    top:0;
+    left:0;
+    z-index:1;
+}
+
+/* HERO TEXT */
+.hero h1{
+    font-size:3rem;
+    z-index:2;
+    animation:fadeUp 2s ease-in-out;
+}
+
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:90px 40px;
+    text-align:center;
+}
+
+.section h2{
+    color:#0ea5e9;
+    margin-bottom:15px;
+    font-size:2rem;
+}
+
+.section p{
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    max-width:850px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:left;
+    transition:0.4s ease;
+    overflow:hidden;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* IMAGE ZOOM EFFECT */
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:15px;
+
+    opacity:0;
+    transform:translateY(30px);
+    transition:all 1.2s ease;
+}
+
+.card img.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card img:hover{
+    transform:scale(1.05);
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.feature-box{
+    background:#ffffff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    transition:0.3s ease;
+}
+
+.feature-box:hover{
+    transform:translateY(-8px);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html" class="active">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="domestic.html">Domestic</a></li>
+
+<li><a href="international.html">International</a></li>
+
+<li><a href="adventure.html">Adventure</a></li>
+
+<li><a href="trekking.html">Trekking</a></li>
+
+<li><a href="hotel.html">Hotels</a></li>
+
+<li><a href="vehicle.html">Vehicles</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li class="dropdown">
+<a href="#">Destinations ▾</a>
+
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+<li><a href="destinations.html">All Destinations</a></li>
+</ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+<img class="slide active" src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1600&q=80">
+<img class="slide" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80">
+<img class="slide" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80">
+
+<h1>Pokhara - City of Lakes</h1>
+
+</section>
+
+<!-- CONTENT -->
+<section class="section">
+
+<h2>Welcome to Pokhara</h2>
+<p>Peaceful lakes, Himalayan views & adventure paradise of Nepal</p>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=1200&q=80">
+
+<p>
+Pokhara is one of Nepal’s most beautiful tourist destinations, known for its calm lakes, mountain views, and spiritual atmosphere.
+It is the gateway to the Annapurna region and a perfect blend of adventure and peace.
+</p>
+
+<br>
+
+<p>
+✔ Boating in Phewa Lake<br>
+✔ Paragliding over mountains<br>
+✔ Davis Falls & caves<br>
+✔ World Peace Pagoda<br>
+✔ Sunrise at Sarangkot
+</p>
+
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+
+<div class="feature-box">
+<h3>🏔 Mountain View</h3>
+<p>Enjoy breathtaking Annapurna Himalayan range.</p>
+</div>
+
+<div class="feature-box">
+<h3>🛶 Lakes</h3>
+<p>Peaceful boating experience in crystal waters.</p>
+</div>
+
+<div class="feature-box">
+<h3>🪂 Adventure</h3>
+<p>Paragliding, zipline & trekking experiences.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Explore Nepal Tours & Travels | Pokhara Experience ✨</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+
+// HERO SLIDESHOW
+const slides = document.querySelectorAll(".slide");
+let current = 0;
+
+setInterval(() => {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+}, 4500);
+
+// IMAGE SCROLL ANIMATION
+const img = document.querySelector(".card img");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.3
+});
+
+observer.observe(img);
+
+</script>
+
+</body>
+</html>

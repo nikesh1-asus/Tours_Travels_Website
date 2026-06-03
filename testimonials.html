@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Reviews - Explore Nepal Tours & Travels</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+    padding-top:70px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(15,23,42,.92);
+    backdrop-filter:blur(12px);
+    z-index:9999;
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    justify-content:center;
+    list-style:none;
+    gap:6px;
+    padding:10px;
+    scrollbar-width:none;
+}
+
+.nav-list::-webkit-scrollbar{
+    display:none;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    padding:10px 14px;
+    border-radius:999px;
+    transition:.3s;
+    white-space:nowrap;
+    font-size:14px;
+}
+
+.nav-list a:hover,
+.active{
+    background:#38bdf8;
+    color:#000 !important;
+}
+
+
+
+
+
+/* ================= DROPDOWN ================= */
+
+.dropdown{
+    position:relative;
+}
+
+.submenu{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:220px;
+    background:#0f172a;
+    border-radius:12px;
+    list-style:none;
+    padding:10px;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+
+    transition:.3s;
+    z-index:1000;
+}
+
+.dropdown:hover .submenu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.submenu li a{
+    display:block;
+    padding:10px;
+    border-radius:8px;
+}
+
+.submenu li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:3.5rem;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:1.2rem;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.stars{
+    color:#facc15;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.review{
+    line-height:1.7;
+    color:#475569;
+}
+
+.client{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.client img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #38bdf8;
+}
+
+.client-info h4{
+    color:#0f172a;
+}
+
+.client-info p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="domestic.html">Domestic</a></li>
+<li><a href="international.html">International</a></li>
+<li><a href="adventure.html">Adventure</a></li>
+<li><a href="trekking.html">Trekking</a></li>
+<li><a href="hotel.html">Hotels</a></li>
+<li><a href="vehicle.html">Vehicles</a></li>
+<li><a href="blog.html">Blog</a></li>
+
+<li class="dropdown">
+<a href="destinations.html">Destinations ▾</a>
+
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+<li><a href="destinations.html">All Destinations</a></li>
+</ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html" class="active">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<div>
+<h1>Customer Reviews</h1>
+<p>What our happy travelers say about their Nepal journey</p>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Traveler Testimonials</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="stars">★★★★★</div>
+<div class="review">
+Amazing service from start to finish. The entire Pokhara tour was perfectly arranged.
+</div>
+<div class="client">
+ <img src="images/Ganesh.jpg" alt="Ganesh Sapkota">   
+<div class="client-info">
+<h4>Ganesh Sapkota</h4>
+<p>Baglung, Nepal</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="stars">★★★★★</div>
+<div class="review">
+Professional trekking guides and excellent support during our Annapurna adventure.
+</div>
+<div class="client">
+<img src="images/Nikesh.jpg" alt="Nikesh Ojha">
+<div class="client-info">
+<h4>Nikesh Ojha</h4>
+<p>Simara, Nepal</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="stars">★★★★★</div>
+<div class="review">
+Affordable packages and outstanding customer support. Highly recommended.
+</div>
+<div class="client">
+<img src="images/Manish.jpg" alt="Manish K.c.">
+<div class="client-info">
+<h4>Manish K.c.</h4>
+<p>Pokhara, Nepal</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="stars">★★★★★</div>
+<div class="review">
+Everest Base Camp Trek exceeded our expectations. Wonderful experience.
+</div>
+<div class="client">
+<img src="images/Birat.jpg" alt="Birat Pante">
+<div class="client-info">
+<h4>Birat Pante</h4>
+<p>Palpa, Nepal</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="stars">★★★★★</div>
+<div class="review">
+Beautiful hotels, great transportation and unforgettable sightseeing tours.
+</div>
+<div class="client">
+<img src="images/Rohit.jpg" alt="Rohit Sah">
+<div class="client-info">
+<h4>Rohit Sah</h4>
+<p>Kathmandu, Nepal</p>
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="stars">★★★★★</div>
+<div class="review">
+Everything was managed professionally. Nepal became our favorite destination.
+</div>
+<div class="client">
+<img src="images/Abhaya.jpg" alt="Abhaya Thapa">
+<div class="client-info">
+<h4>Abhaya Thapa</h4>
+<p>Kathmandu, Nepal</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Explore Nepal Tours & Travels. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.2
+});
+
+cards.forEach(card=>{
+    observer.observe(card);
+});
+
+</script>
+
+</body>
+</html>
+

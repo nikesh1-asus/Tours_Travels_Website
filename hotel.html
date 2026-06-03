@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotels - Explore Nepal Tours & Travels</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+    padding-top:70px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(12px);
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    display:block;
+    padding:10px 14px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:999px;
+    transition:.3s;
+    font-size:14px;
+    white-space:nowrap;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.active{
+    background:#38bdf8;
+    color:#000 !important;
+}
+
+
+/* ================= DROPDOWN ================= */
+
+.dropdown{
+    position:relative;
+}
+
+.submenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:200px;
+    background:#0f172a;
+    border-radius:10px;
+    padding:10px;
+    list-style:none;
+    z-index:999;
+}
+
+.submenu li{
+    width:100%;
+}
+
+.submenu li a{
+    display:block;
+    padding:10px;
+    border-radius:8px;
+}
+
+.submenu li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    font-weight:700;
+    text-shadow:0 3px 10px rgba(0,0,0,.4);
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:10px;
+    text-shadow:0 2px 8px rgba(0,0,0,.4);
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:90px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+/* ================= GRID ================= */
+
+.grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    color:#0f172a;
+}
+
+.card-content p{
+    line-height:1.6;
+    color:#555;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hero{
+        height:50vh;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .section{
+        padding:60px 20px;
+    }
+
+    .submenu{
+        position:static;
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="domestic.html">Domestic</a></li>
+<li><a href="international.html">International</a></li>
+<li><a href="adventure.html">Adventure</a></li>
+<li><a href="trekking.html">Trekking</a></li>
+<li><a href="hotel.html" class="active">Hotels</a></li>
+<li><a href="vehicle.html">Vehicles</a></li>
+<li><a href="blog.html">Blog</a></li>
+
+<li class="dropdown">
+<a href="#">Destinations ▾</a>
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+<li><a href="destinations.html">All Destinations</a></li>
+</ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="testimonials.html">Reviews</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<div>
+<h1>Hotels in Nepal</h1>
+<p>Discover luxury resorts, mountain lodges, and comfortable stays across Nepal</p>
+</div>
+</section>
+
+<!-- HOTEL SECTION -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Top Hotel Options</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80" alt="Luxury Hotel">
+<div class="card-content">
+<h3>Luxury Hotel</h3>
+<p>Experience 5-star comfort, premium hospitality, spa services, and stunning mountain views.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80" alt="Standard Hotel">
+<div class="card-content">
+<h3>Standard Hotel</h3>
+<p>Comfortable rooms, modern facilities, and excellent service at an affordable price.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=80" alt="Budget Hotel">
+<div class="card-content">
+<h3>Budget Hotel</h3>
+<p>Clean, safe, and economical accommodation for travelers seeking value and convenience.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<p>&copy; 2026 Explore Nepal Tours & Travels. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

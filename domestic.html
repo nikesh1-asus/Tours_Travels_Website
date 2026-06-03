@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Domestic Tours - Explore Nepal Tours & Travels</title>
+<link rel="icon" type="images/png" href="images/logo.png" />
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#333;
+    padding-top:70px;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(15,23,42,.85);
+    backdrop-filter:blur(12px);
+}
+
+.nav-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    list-style:none;
+    padding:10px;
+    gap:6px;
+}
+
+.nav-list li{
+    position:relative;
+}
+
+.nav-list li a{
+    display:block;
+    padding:10px 14px;
+    text-decoration:none;
+    color:#fff;
+    border-radius:999px;
+    transition:.3s;
+    font-size:14px;
+    white-space:nowrap;
+}
+
+.nav-list li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.active{
+    background:#38bdf8;
+    color:#000 !important;
+}
+
+
+
+/* ================= DROPDOWN ================= */
+
+.dropdown{
+    position:relative;
+}
+
+.submenu{
+    position:absolute;
+    top:100%;
+    left:0;
+    display:none;
+    min-width:200px;
+    background:#0f172a;
+    border-radius:10px;
+    padding:10px;
+    list-style:none;
+    z-index:999;
+}
+
+.submenu li a{
+    display:block;
+    padding:10px;
+    border-radius:8px;
+}
+
+.submenu li a:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.dropdown:hover .submenu{
+    display:block;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:90px 40px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#38bdf8;
+    font-size:2.5rem;
+}
+
+/* ================= GRID ================= */
+
+.grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* ================= CARD ================= */
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    color:#0f172a;
+}
+
+.card-content p{
+    font-size:.95rem;
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hero{
+        height:50vh;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .section{
+        padding:60px 20px;
+    }
+
+    .submenu{
+        position:static;
+    }
+
+    .dropdown:hover .submenu{
+        display:block;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<ul class="nav-list">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="domestic.html" class="active">Domestic</a></li>
+
+<li><a href="international.html">International</a></li>
+
+<li><a href="adventure.html">Adventure</a></li>
+
+<li><a href="trekking.html">Trekking</a></li>
+
+<li><a href="hotel.html">Hotels</a></li>
+
+<li><a href="vehicle.html">Vehicles</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li class="dropdown">
+<a href="#">Destinations ▾</a>
+
+<ul class="submenu">
+<li><a href="pokhara.html">Pokhara</a></li>
+<li><a href="chitwan.html">Chitwan</a></li>
+<li><a href="lumbini.html">Lumbini</a></li>
+<li><a href="destinations.html">All Destinations</a></li>
+</ul>
+</li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="testimonials.html">Reviews</a></li>
+
+<li><a href="faq.html">FAQ</a></li>
+
+<li><a href="contact.html" class="cta">Contact</a></li>
+
+</ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+<div>
+<h1>Domestic Tours</h1>
+<p>Explore the beauty of Nepal’s most iconic destinations</p>
+</div>
+</section>
+
+<!-- CONTENT -->
+
+<section class="section">
+
+<div class="section-title">
+<h2>Popular Domestic Packages</h2>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<img src="images/pokhara.jpg" alt="Pokhara">
+<div class="card-content">
+<h3>Pokhara Tour</h3>
+<p>Enjoy lakes, mountains, boating, paragliding and breathtaking sunrise views.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/chitwan.jpg" alt="Chitwan">
+<div class="card-content">
+<h3>Chitwan Safari</h3>
+<p>Experience jungle safaris, wildlife encounters and local Tharu culture.</p>
+</div>
+</div>
+
+
+
+<div class="card">
+<img src="images/lumbini.jpg" alt="Lumbini">
+<div class="card-content">
+<h3>Lumbini Visit</h3>
+<p>Visit the birthplace of Lord Buddha and explore peaceful monasteries.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+<p>&copy; 2026 Explore Nepal Tours & Travels. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

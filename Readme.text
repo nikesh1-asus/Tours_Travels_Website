@@ -1,0 +1,125 @@
+🌍 Tours & Travels Website
+
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+A modern, multi-page **Tours & Travels website** built using HTML, CSS, and JavaScript.
+It showcases destinations, travel packages, services, and booking-related pages for a tourism agency.
+
+---
+
+## ✨ Features
+
+* 🌐 Fully multi-page website
+* 📱 Responsive layout design
+* 🏞️ Destination-based travel sections
+* 🏨 Hotel & vehicle booking pages
+* 🖼️ Image gallery for travel experiences
+* ⭐ Testimonials & reviews section
+* ❓ FAQ support page
+* 📰 Blog section for travel articles
+* 🎯 Clean navigation structure
+
+---
+
+## 📁 Project Structure
+
+```
+TOURS_TRAVELS_WEBSITE/
+│
+├── css/                 # Stylesheets
+├── js/                  # JavaScript files
+├── images/              # Website images & assets
+├── .vscode/             # Editor settings
+│
+├── index.html           # Home page
+├── about.html           # About page
+├── services.html        # Services page
+├── contact.html         # Contact page
+├── blog.html            # Blog section
+├── gallery.html         # Image gallery
+├── testimonials.html    # Customer reviews
+├── faq.html             # Frequently asked questions
+├── hotel.html           # Hotel booking page
+├── vehicle.html         # Transport services page
+│
+├── destinations/
+│   ├── domestic.html
+│   ├── international.html
+│   ├── pokhara.html
+│   ├── lumbini.html
+│   ├── chitwan.html
+│   ├── trekking.html
+│   └── adventure.html
+│
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/tours-travels-website.git
+```
+
+### 2. Open the project
+
+Simply open `index.html` in your browser.
+
+### 3. (Recommended)
+
+Use **Live Server (VS Code Extension)** for best experience.
+
+---
+
+## 🛠️ Tech Stack
+
+* HTML5 – Structure
+* CSS3 – Styling & layout
+* JavaScript – Interactivity
+
+---
+
+## 📸 Preview
+
+> Add screenshots here of your homepage, destination pages, etc.
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+---
+
+## 📌 Future Improvements
+
+* Add backend for booking system
+* Improve mobile responsiveness
+* Add animation effects (AOS / GSAP)
+* Integrate payment gateway
+* Add user authentication system
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repo
+2. Create a new branch
+3. Make changes
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+
+
